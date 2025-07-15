@@ -1,0 +1,151 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+
+}
+.link{
+    background-color: #6F7BD9;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: none;
+}
+h1{
+    margin-bottom: 10px;
+    text-align: center;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #C6D3F3;
+    min-height: 100vh; 
+    width: 100%;
+}
+form{
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 6px;
+    font-size: 14px;
+    font-weight: bold;
+}
+form input{
+    margin: 8px 0;
+    padding: 15px;
+    border: 1px solid #999;
+    border-radius: 3px;
+    outline: 0;
+}
+
+form input[type="submit"]{
+    cursor: pointer;
+    background-color: #6F7BD9;
+    color: #fff;
+    border: 1px solid #6F7BD9;
+    font-weight: bold;               
+}
+.link{
+    margin: 20px 0;
+    background-color: #6F7BD9;
+    padding: 10px 20px;
+    color: #fff;
+    border-radius: 6px;
+    text-decoration: 0;
+    
+} 
+.back{
+    padding: 15px;
+    text-align: center;
+    border-radius: 3px;
+    margin-top: 8px;
+}
+main{
+    width:50%;
+}
+img{
+    width: 30px;
+    text-align: center;
+}
+th{
+    text-align:unset; /*permet qu'ii hérite de l'alignement de son parent ou de la page*/ 
+    color: #fff;
+    background-color: #6F7BD9;
+}
+table{
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    border-collapse: collapse;/*Fusionne les bordures des cellules adjacentes et les espacements entre les cellules sont aussi supprimés*/
+    table-layout: fixed;/* Disposition fixe des colonnes du tableau*/
+    border-radius: 10px;
+    overflow: hidden;
+}
+table a {
+    text-align:center;
+}
+.link_container{
+    margin-bottom: 20px;
+}
+table tr{
+    background-color: #f8f8f8;
+    border-bottom: 1px solid #ddd;
+}
+th,td{
+    padding: 20px;
+}
+@media screen and (max-width : 600px ){
+    main{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 20px;
+        width: 100%;
+
+    }
+    table{
+        box-shadow: 0 0 0px rgba(0,0,0,0.2);
+        width: 100%;
+        border-radius: 4px;
+
+
+    }
+    
+
+    table thead{
+        display:none;
+    }
+
+    table tr{
+        display: block;
+        margin-bottom: 10px;
+        border-radius: 6px;
+    }
+    table td{
+        border-bottom: 1px solid #ddd;
+        display: block;
+        font-size: 0.8em;
+
+    }
+
+     table td::before{
+        content:attr(data-label);
+        font-weight: bold;
+        text-transform: uppercase;
+    } 
+    /* on dispose les éléments suivant à gauche */
+    th,td{
+        text-align: unset;
+        padding: 15px;
+    }
+    table td:last-child{
+        border-bottom: 0;
+    } 
+    .image{
+        text-align:unset;
+    }
+
+}
